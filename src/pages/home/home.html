@@ -32,11 +32,11 @@
         </ion-item>
         <br>
         <ion-item>
-          <ion-label>Manter logado</ion-label>
+          <ion-label>Mantenha-me logado.</ion-label>
             <ion-checkbox [(ngModel)]="lembrar"></ion-checkbox>
         </ion-item>
         <br>
-        <button ion-button block color="dark" >login</button>
+        <button ion-button block color="dark" (click)="login()">login</button>
       </ion-list>
     </ion-card-content>
   </ion-card>
