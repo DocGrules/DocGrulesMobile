@@ -1,5 +1,6 @@
 page-home {
 
+
   #custom-overlay {
     position: fixed;
     top: 0;
@@ -36,6 +37,20 @@ page-home {
     height: auto;
     animation: animation 3100ms linear infinite both;
     animation-delay: 1s;
+  }
+
+  .ion-card-header{
+    background-color: #222;
+  }
+  .image{
+    align-content: center;
+    width: 20%;
+    height: 20%;
+    margin-left: 40%;
+  }
+  ion-card.card{
+    margin-top: 30%;
+    border-radius: 15px;
   }
 
 //  - Animação via Bounce.js

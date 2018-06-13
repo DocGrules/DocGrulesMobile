@@ -8,6 +8,36 @@
   </div>
 </div>
 
-<ion-content padding>
-
+<ion-content class="background-app">
+  <ion-card>
+    <ion-card-header class="ion-card-header">
+      <img class="image" src="assets/imgs/books2.png">
+    </ion-card-header>
+    <br>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label floating>
+              <ion-icon name="person"></ion-icon>
+            Usuário:
+          </ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>
+                <ion-icon name="key"></ion-icon>
+              Senha:
+            </ion-label>
+            <ion-input type="password"></ion-input>
+        </ion-item>
+        <br>
+        <ion-item>
+          <ion-label>Manter logado</ion-label>
+            <ion-checkbox [(ngModel)]="lembrar"></ion-checkbox>
+        </ion-item>
+        <br>
+        <button ion-button block color="dark" >login</button>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
