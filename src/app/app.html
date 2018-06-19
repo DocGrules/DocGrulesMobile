@@ -7,7 +7,7 @@
   <ion-content padding>
     <img src="assets/imgs/logorede.png">
     <ion-list>
-      <button menuClose ion-item *ngFor="let pagina of paginas" (click)="abrirPagina(pagina)">
+      <button menuClose ion-item *ngFor="let pagina of paginas" [class.activeHighlight]="checkActive(pagina)" (click)="abrirPagina(pagina)">
           {{pagina.title}}
       </button>
     </ion-list>

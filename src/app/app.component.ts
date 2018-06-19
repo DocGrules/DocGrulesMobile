@@ -5,6 +5,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
+import { FeedeventoPage } from '../pages/feedevento/feedevento';
 @Component({
   templateUrl: 'app.html'
 })
@@ -13,7 +14,7 @@ export class MyApp {
 
   rootPage:any = HomePage;
   paginas: Array<{title: string, component: any}>;
-
+  paginaAtiva: any;
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
@@ -21,13 +22,22 @@ export class MyApp {
       statusBar.styleDefault();
       splashScreen.hide();
     });
+
     this.paginas = [
-      {title: "Eventos", component: EventoPage}
+      {title: "Principal", component: FeedeventoPage},
+      {title: "Eventos", component: EventoPage},
     ];
+
+    this.paginaAtiva = this.paginas[0];
   }
 
   abrirPagina(pagina){
     this.nav.setRoot(pagina.component);
+    this.paginaAtiva = pagina;
+  }
+
+  checkActive(pagina){
+    return pagina == this.paginaAtiva;
   }
 }
 
