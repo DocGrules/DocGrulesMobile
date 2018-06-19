@@ -1,3 +1,4 @@
+import { EventoPage } from './../pages/evento/evento';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -9,11 +10,13 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { FeedeventoPage } from './../pages/feedevento/feedevento';
 
+
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    FeedeventoPage
+    FeedeventoPage,
+    EventoPage
   ],
   imports: [
     BrowserModule,
@@ -23,7 +26,8 @@ import { FeedeventoPage } from './../pages/feedevento/feedevento';
   entryComponents: [
     MyApp,
     HomePage,
-    FeedeventoPage
+    FeedeventoPage,
+    EventoPage
   ],
   providers: [
     StatusBar,

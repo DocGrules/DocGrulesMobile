@@ -26,3 +26,7 @@
 .text-justify{
   text-align: justify;
 }
+
+.activeHighlight{
+  background-color: map-get($colors, light);
+}
