@@ -16,7 +16,14 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class FeedeventoPage {
 
+  imagens: Array<{titulo: string}>;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.imagens = [
+      {titulo: "assets/imgs/docgrules1.jpg"},
+      {titulo: "assets/imgs/docgrules2.jpg"},
+      {titulo: "assets/imgs/docgrules3.jpg"},
+    ];
   }
 
   ionViewDidLoad() {
