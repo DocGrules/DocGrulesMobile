@@ -1,3 +1,4 @@
+import { ApresentacaoPage } from './../pages/apresentacao/apresentacao';
 import { FlashCardComponent } from './../components/flash-card/flash-card';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
@@ -20,6 +21,7 @@ import { RestProvider } from '../providers/rest/rest';
     HomePage,
     FeedeventoPage,
     EventoPage,
+    ApresentacaoPage,
     FlashCardComponent
   ],
   imports: [
@@ -32,7 +34,8 @@ import { RestProvider } from '../providers/rest/rest';
     MyApp,
     HomePage,
     FeedeventoPage,
-    EventoPage
+    EventoPage,
+    ApresentacaoPage
   ],
   providers: [
     StatusBar,

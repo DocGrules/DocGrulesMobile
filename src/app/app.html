@@ -8,7 +8,7 @@
     <img src="assets/imgs/logorede.png">
     <ion-list>
       <button menuClose ion-item *ngFor="let pagina of paginas" [class.activeHighlight]="checkActive(pagina)" (click)="abrirPagina(pagina)">
-          <ion-icon name="radio-button-on"></ion-icon>        {{pagina.title}}
+          <ion-icon name="radio-button-on"></ion-icon> &nbsp; {{pagina.title}}
       </button>
     </ion-list>
   </ion-content>

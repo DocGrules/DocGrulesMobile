@@ -35,15 +35,14 @@
           <img src="assets/imgs/jaiminho.jpg">
         </ion-card-content>
       </ion-card> -->
-    <flash-card *ngFor="let evento of eventos">
+    <flash-card *ngFor="let imagem of imagens">
         <div class="flash-card-front">
-          <img class="flash-card-imagem" src="assets/imgs/androiddthings.png">
+          <img class="flash-card-imagem" src="{{imagem.url}}}">
         </div>
         <div class="flash-card-back">
           <div class="flash-card-backend">
-            {{evento.id}}
-            {{evento.semestre}}
-            {{evento.tema}}
+            {{imagem.id}}
+            {{imagem.title}}
           </div>
         </div>
     </flash-card>

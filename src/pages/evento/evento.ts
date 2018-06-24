@@ -17,19 +17,28 @@ import { RestProvider } from '../../providers/rest/rest';
 export class EventoPage {
 
   eventos: any;
+  imagens: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public restProvider: RestProvider) {
-    this.getUsers();
+    //this.getUsers();
+    this.getImagens();
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad EventoPage');
   }
 
-  getUsers() {
-    this.restProvider.getUsers().then(data => {
-      this.eventos = data;
-      console.log(this.eventos);
+  // getUsers() {
+  //   this.restProvider.getEventos().then(data => {
+  //     this.eventos = data;
+  //     console.log(this.eventos);
+  //   });
+  // }
+
+  getImagens(){
+    this.restProvider.getImagens().then(data => {
+      this.imagens = data;
+      console.log(this.imagens);
     });
   }
 

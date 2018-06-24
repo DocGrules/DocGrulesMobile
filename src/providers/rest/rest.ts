@@ -10,16 +10,27 @@ import 'rxjs/add/operator/map';
 */
 @Injectable()
 export class RestProvider {
-  api = 'http://192.168.0.102:8080/api-grules/webresources/eventos'
+
   apiUrl = 'https://jsonplaceholder.typicode.com';
+  urlgustavo = '192.168.0.103:8080/api-grules/webresources/eventos';
+
 
   constructor(public http: HttpClient) {
     console.log('Hello RestProvider Provider');
   }
 
-  getUsers() {
+  // getEventos() {
+  //   return new Promise(resolve => {
+  //     this.http.get(this.urlgustavo).subscribe(data => {
+  //       resolve(data);
+  //     }, err => {
+  //       console.log(err);
+  //     });
+  //   });
+  // }
+  getImagens(){
     return new Promise(resolve => {
-      this.http.get(this.api).subscribe(data => {
+      this.http.get(this.apiUrl+'/albums/1/photos').subscribe(data => {
         resolve(data);
       }, err => {
         console.log(err);
