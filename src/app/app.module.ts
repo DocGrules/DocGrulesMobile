@@ -1,3 +1,4 @@
+import { ModalgrupoPageModule } from './../pages/modalgrupo/modalgrupo.module';
 import { ApresentacaoPage } from './../pages/apresentacao/apresentacao';
 import { FlashCardComponent } from './../components/flash-card/flash-card';
 import { BrowserModule } from '@angular/platform-browser';
@@ -22,11 +23,12 @@ import { RestProvider } from '../providers/rest/rest';
     FeedeventoPage,
     EventoPage,
     ApresentacaoPage,
-    FlashCardComponent
+    FlashCardComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    ModalgrupoPageModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -35,7 +37,7 @@ import { RestProvider } from '../providers/rest/rest';
     HomePage,
     FeedeventoPage,
     EventoPage,
-    ApresentacaoPage
+    ApresentacaoPage,
   ],
   providers: [
     StatusBar,

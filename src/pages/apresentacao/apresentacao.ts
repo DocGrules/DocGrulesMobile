@@ -1,6 +1,5 @@
-import { HomePage } from './../home/home';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
 
 /**
  * Generated class for the ApresentacaoPage page.
@@ -35,7 +34,7 @@ export class ApresentacaoPage {
 
   shownGroup = null;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private modal: ModalController) {
   }
 
   ionViewDidLoad() {
@@ -53,7 +52,8 @@ export class ApresentacaoPage {
     return this.shownGroup === group;
   };
 
-  topage(){
-    this.navCtrl.setRoot(HomePage);
+  openModalGrupo(){
+    const minhaModal = this.modal.create('ModalgrupoPage');
+    minhaModal.present();
   }
 }
