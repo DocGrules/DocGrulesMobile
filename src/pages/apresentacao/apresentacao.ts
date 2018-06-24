@@ -53,7 +53,7 @@ export class ApresentacaoPage {
   };
 
   openModalGrupo(){
-    const minhaModal = this.modal.create('ModalgrupoPage');
+    const minhaModal = this.modal.create('ModalgrupoPage', {data: this.apresentacao});
     minhaModal.present();
   }
 }
