@@ -12,22 +12,13 @@ import 'rxjs/add/operator/map';
 export class RestProvider {
 
   apiUrl = 'https://jsonplaceholder.typicode.com';
-  urlgustavo = '192.168.0.103:8080/api-grules/webresources/eventos';
-
+  urlgustavo = 'http://192.168.0.7:8080/api-grules/webresources/eventos';
+  urlgustavo2 = 'http://192.168.0.7:8080/api/webresources/produtos';
 
   constructor(public http: HttpClient) {
     console.log('Hello RestProvider Provider');
   }
 
-  // getEventos() {
-  //   return new Promise(resolve => {
-  //     this.http.get(this.urlgustavo).subscribe(data => {
-  //       resolve(data);
-  //     }, err => {
-  //       console.log(err);
-  //     });
-  //   });
-  // }
   getImagens(){
     return new Promise(resolve => {
       this.http.get(this.apiUrl+'/albums/1/photos').subscribe(data => {
@@ -36,5 +27,16 @@ export class RestProvider {
         console.log(err);
       });
     });
+  }
+
+  getEventos(){
+    return new Promise(resolve => {
+      this.http.get(this.urlgustavo).subscribe(data => {
+        resolve(data);
+      }, err => {
+        console.log(err);
+      });
+    });
+
   }
 }

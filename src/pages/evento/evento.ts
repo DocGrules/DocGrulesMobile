@@ -20,20 +20,20 @@ export class EventoPage {
   imagens: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public restProvider: RestProvider) {
-    //this.getUsers();
-    this.getImagens();
+    this.getUsers();
+    //this.getImagens();
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad EventoPage');
   }
 
-  // getUsers() {
-  //   this.restProvider.getEventos().then(data => {
-  //     this.eventos = data;
-  //     console.log(this.eventos);
-  //   });
-  // }
+   getUsers() {
+     this.restProvider.getEventos().then(data => {
+       this.eventos = data;
+       console.log(this.eventos);
+     });
+   }
 
   getImagens(){
     this.restProvider.getImagens().then(data => {

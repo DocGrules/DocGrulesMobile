@@ -15,12 +15,15 @@ import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angul
 })
 export class ModalgrupoPage {
 
+  objeto: any;
+
   constructor(public navCtrl: NavController, public navParams: NavParams, private view: ViewController) {
   }
 
   ionViewWillLoad() {
     const data =this.navParams.get('data');
-    console.log(data);
+    this.objeto = data;
+    console.log(this.objeto);
   }
 
   fecharModal(){

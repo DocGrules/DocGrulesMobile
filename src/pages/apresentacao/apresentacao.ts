@@ -32,6 +32,8 @@ export class ApresentacaoPage {
     },
   ];
 
+  index:any;
+
   shownGroup = null;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private modal: ModalController) {
@@ -46,6 +48,8 @@ export class ApresentacaoPage {
         this.shownGroup = null;
     } else {
         this.shownGroup = group;
+        this.index = this.shownGroup;
+        console.log(this.index);
     }
   };
   isGroupShown(group) {
@@ -53,7 +57,7 @@ export class ApresentacaoPage {
   };
 
   openModalGrupo(){
-    const minhaModal = this.modal.create('ModalgrupoPage', {data: this.apresentacao});
+    const minhaModal = this.modal.create('ModalgrupoPage', {data: this.apresentacao[this.index]} );
     minhaModal.present();
   }
 }
