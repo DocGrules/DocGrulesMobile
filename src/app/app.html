@@ -1,14 +1,14 @@
 <ion-menu [content]="content">
   <ion-header>
-      <ion-navbar color="dark">
+      <ion-navbar color="cinza">
           <ion-title>Menu</ion-title>
         </ion-navbar>
   </ion-header>
-  <ion-content padding>
-    <img src="assets/imgs/logorede.png">
+  <ion-content padding class="background-app">
+    <img id="imagemmenu" src="assets/imgs/logodoctumbranca.png">
     <ion-list>
-      <button menuClose ion-item *ngFor="let pagina of paginas" [class.activeHighlight]="checkActive(pagina)" (click)="abrirPagina(pagina)">
-          <ion-icon name="radio-button-on"></ion-icon> &nbsp; {{pagina.title}}
+      <button menuClose ion-item id="buttonmenu" *ngFor="let pagina of paginas" [class.activeHighlight]="checkActive(pagina)" (click)="abrirPagina(pagina)">
+          &nbsp; {{pagina.title}}
       </button>
     </ion-list>
   </ion-content>

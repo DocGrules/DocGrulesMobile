@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar color="dark" >
+  <ion-navbar color="cinza" >
     <ion-buttons start>
       <button ion-button icon-only menuToggle>
         <ion-icon name="menu"></ion-icon>
@@ -11,19 +11,19 @@
 
 <ion-content padding class="background-app">
   <ion-list>
-    <ion-item *ngFor="let apre of apresentacao; let i=index" text-wrap (click)="toggleGroup(i)" [ngClass]="{active: isGroupShown(i)}">
+    <ion-item id="itemLista" *ngFor="let apre of apresentacao; let i=index" text-wrap (click)="toggleGroup(i)" [ngClass]="{active: isGroupShown(i)}">
       <h3>
         {{apre.dia}}
         <ion-icon color="success" item-right [name]="isGroupShown(i) ? 'arrow-dropdown' : 'arrow-dropright'"></ion-icon>
       </h3>
       <div *ngIf="isGroupShown(i)">
         <ion-list>
-          <ion-item *ngFor="let a of apre.grupos">
+          <ion-item *ngFor="let a of apre.grupos" id="listadentro">
             <label>Curso: </label>{{a.curso}} &nbsp;
             <label>Assunto:</label>{{a.assunto}}
           </ion-item>
         </ion-list>
-        <button ion-button block (click)="openModalGrupo()" color="dark">Detalhes</button>
+        <button ion-button (click)="openModalGrupo()" color="light">Detalhes</button>
       </div>
     </ion-item>
   </ion-list>

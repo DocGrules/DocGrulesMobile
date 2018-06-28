@@ -16,11 +16,12 @@
 // automatically applied to the <body> element in the app.
 
 .background-app{
-  background: linear-gradient(to bottom right, rgb(192, 203, 255), rgb(253, 253, 253));
+  // background: linear-gradient(to bottom right, rgb(192, 203, 255), rgb(253, 253, 253));
+  background: #46575e;
 }
 
 .navbar{
-  background: #222;
+  background: rgb(75, 70, 70);
 }
 
 .text-justify{
@@ -29,7 +30,15 @@
 }
 
 .activeHighlight{
-  background-color: map-get($colors, light);
+  background-color: map-get($colors, dark);
 }
 
+#buttonmenu{
+  background-color: rgba(34, 34, 34, 0);
+  color: white;
+}
 
+#imagemmenu{
+  margin-top: -20%;
+  margin-bottom: -15%;
+}
