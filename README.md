@@ -17,3 +17,6 @@ O aplicativo está disponível apenas para android e consome uma api que está e
     Execute o comando   npm install   a partir da raiz para instalar os módulos do nó
     Execute o comando   ionic state   reset para instalar as plataformas e plugins
     Execute o comando   ionic serve   para abrir o aplicativo no navegador.
+# Layout
+
+Layout do aplicativo feito com Adobe Photoshop juntamente com Adobe Illustrator, imagens de autoria própria tiradas do ateliê Doctum Grules do curso de sistemas do ano de 2017
