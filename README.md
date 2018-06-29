@@ -20,3 +20,7 @@ O aplicativo está disponível apenas para android e consome uma api que está e
 # Layout
 
 Layout do aplicativo feito com Adobe Photoshop juntamente com Adobe Illustrator, imagens de autoria própria tiradas do ateliê Doctum Grules do curso de sistemas do ano de 2017
+
+# Desenvolvimento
+
+Foi desenvolvido em conjunto as formas de consumo do rest 
